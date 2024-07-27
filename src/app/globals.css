@@ -24,6 +24,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+  font-family: 'Inter', sans-serif;
 }
 
 @layer utilities {
@@ -31,3 +33,12 @@ body {
     text-wrap: balance;
   }
 }
+
+/* globals.css */
+@font-face {
+  font-family: 'Inter';
+  src: url('/public/fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
