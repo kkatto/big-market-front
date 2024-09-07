@@ -4,6 +4,7 @@ import React, {useState, useRef, useEffect} from 'react'
 // @ts-ignore
 import {LuckyGrid} from '@lucky-canvas/react'
 import {draw, queryRaffleAwardList} from "@/apis";
+import {RaffleAwardVO} from "@/types/RaffleAwardVO";
 
 /**
  * 大转盘文档：https://100px.net/docs/grid.html
@@ -18,7 +19,8 @@ export function LuckyGridPage() {
         const userId = String(queryParams.get('userId'));
         const activityId = Number(queryParams.get('activityId'));
         const result = await queryRaffleAwardList(userId, activityId);
-        const {code, info, data} = await result.json();
+        const {code, info, data}: { code: string; info: string; data: RaffleAwardVO[] }  = await result.json();
+
         if (code != "0000") {
             window.alert("获取抽奖奖品列表失败 code:" + code + " info:" + info)
             return;
