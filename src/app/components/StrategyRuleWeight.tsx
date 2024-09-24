@@ -77,7 +77,7 @@ export function StrategyRuleWeight({refresh}) {
                 <div key={index}>
                     <ProgressBar index={index} total={ruleWeight.ruleWeightCount}
                                  completed={ruleWeight.userActivityAccountTotalUseCount}
-                                 awards={ruleWeight.strategyAwards}/>
+                                 awards={ruleWeight.strategyAwardList}/>
                 </div>
             ))}
         </>

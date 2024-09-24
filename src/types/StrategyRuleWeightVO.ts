@@ -1,7 +1,7 @@
 export interface StrategyRuleWeightVO {
     ruleWeightCount: number;
     userActivityAccountTotalUseCount: number;
-    strategyAwards: StrategyAward[];
+    strategyAwardList: StrategyAward[];
 }
 
 export interface StrategyAward {
